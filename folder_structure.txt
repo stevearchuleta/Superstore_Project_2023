@@ -1,0 +1,21 @@
+Folder PATH listing for volume WD_Black SN750 SSD 931GB
+Volume serial number is EE5C-C805
+C:.
+|   .gitignore
+|   folder_structure.txt
+|   README.md
+|   requirements.txt
+|   
++---data
+|       orders.csv
+|       returns.csv
+|       superstore_project_2023.xlsx
+|       
++---documentation
+|       Data_Dictionary.xlsx
+|       
++---jupyter_notebooks
++---scripts
+|       convert_to_csv.py
+|       
+\---sql

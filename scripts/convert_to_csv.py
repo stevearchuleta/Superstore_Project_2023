@@ -1,15 +1,17 @@
 import pandas as pd
+import os
 
-input_file = r"C:\Users\steve\Documents\SuperStore_Project_2023\Superstore_Project_2023\data\superstore_project_2023.xlsx"
-output_path = r"C:\Users\steve\Documents\SuperStore_Project_2023\Superstore_Project_2023\data"
+# Set the correct file paths for your project
+xlsx_file_path = 'C:/Users/steve/Documents/SuperStore_Project_2023/Superstore_Project_2023/data/superstore_project_2023.xlsx'
+csv_folder_path = 'C:/Users/steve/Documents/SuperStore_Project_2023/Superstore_Project_2023/data/'
 
-# Read the .xlsx file
-xlsx = pd.read_excel(input_file, sheet_name=None, engine='openpyxl')
+# Load the Excel file
+xlsx = pd.read_excel(xlsx_file_path, sheet_name=None)
 
-# Save each sheet as a separate .csv file
+# Export each sheet to a separate CSV file
 for sheet_name, sheet_data in xlsx.items():
-    output_file = f"{output_path}\\{sheet_name}.csv"
-    sheet_data.to_csv(output_file, index=False)
+    sheet_data.to_csv(os.path.join(csv_folder_path, f'{sheet_name}.csv'), index=False)
+
 
 
 #  Explanations for each line of code (in both beginner-level and intermediate-level fashion).
