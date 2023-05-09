@@ -16,6 +16,11 @@ C:.
 |       
 +---jupyter_notebooks
 +---scripts
+|       Business_Queries.txt
 |       convert_to_csv.py
 |       
 \---sql
+        ERD.png
+        first_ten_queries.sql
+        second_nine_queries.sql
+        
