@@ -80,10 +80,11 @@ The LIMIT 3 clause restricts the output to the top 3 states.*/
 -- 10. What is the most common reason for returns?
 SELECT reason_returned, COUNT(*) as return_count
 FROM returns
-GROUP BY reason_returnedwha
+GROUP BY reason_returned
 ORDER BY return_count DESC
 LIMIT 4;
-/*This query selects the reason_returned and counts the number of occurrences of each reason in the 'returns' table. 
+
+/*This query selectorders_by_categorycategorys the reason_returned and counts the number of occurrences of each reason in the 'returns' table. 
 It groups the result by reason_returned and orders the output in descending order based on the count of returned items. 
 The LIMIT 1 statement restricts the output to show only the most common reason.*/
 
