@@ -1,0 +1,89 @@
+SELECT * FROM superstore_project_2023.orders;
+
+-- =================================================================================
+-- 1. What is the total number of orders per product category?
+select category, COUNT(*) as total_orders
+from orders
+group by category;
+/*This query will select the 'category' column from the 'orders' table and use the COUNT() function to count the number of rows in each category. 
+The result will be grouped by the 'category' column, giving you the total number of orders per product category.*/
+
+-- =================================================================================
+-- 2. What is the total number of orders per sub-category?
+SELECT sub_category, COUNT(*) as total_orders
+FROM orders
+GROUP BY sub_category;
+/*This query will select the 'sub_category' column from the 'orders' table and use the COUNT() function to count the number of rows in each sub-category. 
+The result will be grouped by the 'sub_category' column, giving you the total number of orders per sub-category.*/
+
+-- =================================================================================
+-- 3. Which are the top 5 products by the total number of orders?
+SELECT product_name, COUNT(*) as total_orders
+FROM orders
+GROUP BY product_name
+ORDER BY total_orders DESC
+LIMIT 5;
+/*This query will select the 'product_name' column from the 'orders' table and use the COUNT() function to count the number of rows for each product. 
+The result will be grouped by the 'product_name' column and ordered in descending order by the number of orders. 
+The LIMIT 5 clause will return only the top 5 products with the highest number of orders.*/
+
+-- =================================================================================
+-- 4. What is the total number of orders per year?
+SELECT YEAR(order_date) as order_year, COUNT(*) as total_orders
+FROM orders
+GROUP BY order_year
+ORDER BY order_year;
+/*This query will select the year part of the 'order_date' column from the 'orders' table using the YEAR() function and count the number of rows for each year. 
+The result will be grouped by the 'order_year' alias and ordered by the 'order_year' in ascending order.*/
+
+-- =================================================================================
+-- 5. Which customers have the highest number of returned orders?
+SELECT Customer_Name, COUNT(order_id) as total_orders
+FROM returns
+GROUP BY Customer_Name
+ORDER BY total_orders DESC;
+/*This query selects the Customer_Name and counts the number of order_id associated with each customer in the 'returns' table. 
+It groups the result by Customer_Name and orders the output in descending order based on the total number of returned orders.*/
+-- =================================================================================
+-- 6. What is the total number of products returned per category?
+SELECT Category, SUM(return_quantity) as total_products_returned
+FROM returns
+GROUP BY Category;
+/*This query selects the Category column and calculates the sum of the return_quantity column for each category in the 'returns' table. 
+It groups the result by the Category column, giving you the total number of products returned per category.*/
+-- =================================================================================
+-- 7. What is the total quantity of products returned per category?
+SELECT Category, SUM(return_quantity) as total_returned_quantity
+FROM returns
+GROUP BY Category;
+/*This query selects the Category and calculates the sum of return_quantity associated with each category in the 'returns' table. It groups the result by Category.*/
+
+-- =================================================================================
+-- 8. What is the average profit margin per category for returned items?
+SELECT Category, AVG(Profit_Margin) as avg_profit_margin
+FROM returns
+GROUP BY Category;
+/*This query selects the Category and calculates the average Profit_Margin associated with each category in the 'returns' table. 
+It groups the result by Category.*/
+-- =================================================================================
+-- 9. What are the top 3 states with the highest number of returned orders?
+SELECT State, COUNT(order_id) as total_returned_orders
+FROM returns
+GROUP BY State
+ORDER BY total_returned_orders DESC
+LIMIT 3;
+/*This query selects the State and counts the number of order_id associated with each state in the 'returns' table. 
+It groups the result by State and orders the output in descending order based on the total number of returned orders. 
+The LIMIT 3 clause restricts the output to the top 3 states.*/
+
+-- =================================================================================
+-- 10. What is the most common reason for returns?
+SELECT reason_returned, COUNT(*) as return_count
+FROM returns
+GROUP BY reason_returnedwha
+ORDER BY return_count DESC
+LIMIT 4;
+/*This query selects the reason_returned and counts the number of occurrences of each reason in the 'returns' table. 
+It groups the result by reason_returned and orders the output in descending order based on the count of returned items. 
+The LIMIT 1 statement restricts the output to show only the most common reason.*/
+
