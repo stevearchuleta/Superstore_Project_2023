@@ -20,6 +20,7 @@ C:.
 |       convert_to_csv.py
 |       
 \---sql
+        database_table_creation.sql
         ERD.png
         first_ten_queries.sql
         second_nine_queries.sql
