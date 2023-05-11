@@ -45,10 +45,5 @@ As part of my SQL analysis, I generated 19 business queries that helped answer c
 - Jupyter Notebook: Interactive computing and data visualization
 - Git and GitHub: Version control and project management
 
-## Getting Started
 
-1. Clone the repository to your local machine.
-2. Install the required Python libraries listed in `requirements.txt`.
-3. Explore the dataset using the Jupyter Notebooks in the `jupyter_notebooks` directory.
-4. Refer to the `documentation` directory for the data dictionary and project report.
 
