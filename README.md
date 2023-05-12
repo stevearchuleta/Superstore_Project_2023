@@ -46,4 +46,50 @@ As part of my SQL analysis, I generated 19 business queries that helped answer c
 - Git and GitHub: Version control and project management
 
 
+Folder PATH listing for volume WD_Black SN750 SSD 931GB
+Volume serial number is EE5C-C805
+C:.
+|   .gitignore
+|   folder_structure.txt
+|   README.md
+|   requirements.txt
+|   Untitled.ipynb
+|   
++---.ipynb_checkpoints
+|       Untitled-checkpoint.ipynb
+|       
++---data
+|       orders.csv
+|       returns.csv
+|       superstore_project_2023.xlsx
+|       
++---documentation
+|       Data_Dictionary.xlsx
+|       
++---figures
++---jupyter_notebooks
+|   |   Data Cleaning and Preprocessing.ipynb
+|   |   Model Tuning and Evaluation.ipynb
+|   |   Supervised Learning Classification.ipynb
+|   |   Supervised Learning Regression.ipynb
+|   |   Unsupervised Learning.ipynb
+|   |   
+|   \---.ipynb_checkpoints
+|           Data Cleaning and Preprocessing-checkpoint.ipynb
+|           Model Tuning and Evaluation-checkpoint.ipynb
+|           Supervised Learning Classification-checkpoint.ipynb
+|           Supervised Learning Regression-checkpoint.ipynb
+|           Unsupervised Learning-checkpoint.ipynb
+|           
++---models
++---scripts
+|       Business_Queries.txt
+|       convert_to_csv.py
+|       
+\---sql
+        database_table_creation.sql
+        ERD.png
+        first_ten_queries.sql
+        second_nine_queries.sql
+        
 
