@@ -5,7 +5,11 @@ C:.
 |   folder_structure.txt
 |   README.md
 |   requirements.txt
+|   Untitled.ipynb
 |   
++---.ipynb_checkpoints
+|       Untitled-checkpoint.ipynb
+|       
 +---data
 |       orders.csv
 |       returns.csv
@@ -14,7 +18,22 @@ C:.
 +---documentation
 |       Data_Dictionary.xlsx
 |       
++---figures
 +---jupyter_notebooks
+|   |   Data Cleaning and Preprocessing.ipynb
+|   |   Model Tuning and Evaluation.ipynb
+|   |   Supervised Learning Classification.ipynb
+|   |   Supervised Learning Regression.ipynb
+|   |   Unsupervised Learning.ipynb
+|   |   
+|   \---.ipynb_checkpoints
+|           Data Cleaning and Preprocessing-checkpoint.ipynb
+|           Model Tuning and Evaluation-checkpoint.ipynb
+|           Supervised Learning Classification-checkpoint.ipynb
+|           Supervised Learning Regression-checkpoint.ipynb
+|           Unsupervised Learning-checkpoint.ipynb
+|           
++---models
 +---scripts
 |       Business_Queries.txt
 |       convert_to_csv.py
